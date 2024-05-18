@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title%}Authentication{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <p><label for="id_1">Login: </label><input type="text" id ="id_1"></p>
+    <p><label for="id_2">Password: </label><input type="password" id ="id_2"></p>
+    <p><button type="submit">Enter</button></p>
+</form>
+{% endblock %}

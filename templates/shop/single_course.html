@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+
+{% block title%}{{course.title}}{% endblock %}
+
+{% block content %}
+<h1 class="mt-5">{{course.title}}</h1>
+{% if course.photo %}
+<p><img class = "img-article-left" src="{{ course.photo.url }}" alt="connect" style="max-height:250px"></p>
+{% endif %}
+<h2>Category: {{course.category}}</h2>
+<p>Price: {{course.price}}</p>
+<p>Students Quantity: {{course.students_qty}}</p>
+<button class="btn btn-primary">Buy</button>
+{% endblock %}
+
